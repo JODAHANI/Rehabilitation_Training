@@ -1,0 +1,256 @@
+html {
+  height: auto;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #ddd;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+}
+
+.modal,
+.fail-modal {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -300px;
+  transition: all 0.3s ease-in-out;
+}
+
+.fail-modal.on,
+.modal.on {
+  top: 40px;
+}
+.fail-modal-content {
+  display: flex;
+  width: 250px;
+  background-color: #fff;
+  border: 1.7px solid rgb(244, 93, 123);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 1rem;
+  border-radius: 30px;
+  font-size: 0.6rem;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+.modal-content {
+  display: flex;
+  width: 200px;
+  background-color: #fff;
+  border: 1.4px solid #4c41d3;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fail-modal-content p,
+.modal-content p {
+  color: #4c41d3;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+}
+.fail-modal-content p {
+  color: crimson;
+  font-size: 1.1rem;
+}
+.modal-content span {
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+  padding-top: 120px;
+  box-sizing: border-box;
+}
+
+.input-wrap {
+  display: flex;
+  gap: 10px;
+}
+.top {
+  width: 100%;
+}
+.input {
+  display: block;
+  width: 100%;
+  flex: 8.5;
+  border: 2px solid #444;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+.input:focus {
+  border: 4px solid #222;
+}
+
+input::placeholder {
+  color: #999;
+  font-size: 1rem;
+}
+
+.mission-add-btn {
+  width: 100%;
+  flex: 1.5;
+  border: none;
+  color: #fff;
+  background-color: #222;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bottom {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+ul {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mission {
+  box-sizing: border-box;
+  list-style: none;
+  width: 100%;
+  background-color: #fff;
+  padding: 0rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.3s;
+}
+.mission.deleted {
+  opacity: 0; /* 삭제될 때 투명도를 0으로 설정하여 서서히 사라지도록 함 */
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.check-box {
+  cursor: pointer;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  background-color: #fff;
+  transition: all 0.15s;
+}
+
+.my-check-box:checked + .check-box {
+  background-color: #333;
+}
+
+.check-box::before {
+  content: "✓";
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-top: -8px;
+}
+
+.check-box:after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 0px;
+  left: 12px;
+  top: 48%;
+  transform: translateY(-50%);
+  background-color: #444;
+}
+
+.my-check-box:checked + .check-box:after {
+  height: 4px;
+  border-radius: 5px;
+}
+
+.box-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.delete-btn {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #333;
+  background-color: #fff;
+  transition: all 0.15s;
+  position: relative;
+  border: 2px solid #333;
+  padding: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 0.2rem;
+}
+
+.check {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  content: "\2713"; /* 체크 표시로 사용할 유니코드 문자(체크 마크) */
+  display: none; /* 기본적으로는 가상 요소 숨김 */
+}
+
+@keyframes falling {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
