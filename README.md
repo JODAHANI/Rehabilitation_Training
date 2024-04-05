@@ -2,7 +2,9 @@
 
 To-Do List 프로젝트는 할 일 목록을 관리하기 위한 간단한 웹 어플리케이션입니다.
 
-![Uploading editVideo-ezgif.com-video-to-gif-converter.gif…]()
+![editVideo-ezgif com-video-to-gif-converter](https://github.com/JODAHANI/Rehabilitation_Training/assets/58819544/c8dc3d27-63e6-4311-8578-431a6075fd2f)
+
+
 
 ## 소개
 이 프로젝트는 사용자가 할 일을 추가, 삭제 할 수 있는 간단한 To-Do List를 제공합니다. 
