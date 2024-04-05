@@ -1,7 +1,8 @@
-## To-do List.  
-(3시간 걸린 자바스크립트 재활 훈련 프로젝트🔥)
+## To-do List🔥
+<br>
 
-To-Do List 프로젝트는 할 일 목록을 관리하기 위한 간단한 웹 어플리케이션입니다.
+
+- 본 프로젝트는 코드 재활 훈련을 목적으로 개발되었습니다.
 
 ![editVideo-ezgif com-video-to-gif-converter](https://github.com/JODAHANI/Rehabilitation_Training/assets/58819544/c8dc3d27-63e6-4311-8578-431a6075fd2f)
 
