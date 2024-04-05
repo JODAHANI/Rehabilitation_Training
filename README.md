@@ -1,8 +1,9 @@
-## To-do List🔥
+## To-do List 🔥
 <br>
 
 
-- 본 프로젝트는 코드 재활 훈련을 목적으로 개발되었습니다.
+- 귀여운 디자인을 가진 To-do List!<br>
+- 코드 재활 훈련 목적으로 만들었습니다.😊<br>
 
 ![editVideo-ezgif com-video-to-gif-converter](https://github.com/JODAHANI/Rehabilitation_Training/assets/58819544/c8dc3d27-63e6-4311-8578-431a6075fd2f)
 
