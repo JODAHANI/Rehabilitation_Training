@@ -44,7 +44,7 @@ const init = () => {
   };
 
   // 미션 추가.
-  const addMissionHandler = (e) => {
+  const addMissionHandler = () => {
     const newTodo = input.value;
     if (newTodo.length === 0) {
       const failedText = "텍스트를 입력해주세요.";
@@ -82,9 +82,8 @@ const init = () => {
     newBoxWrapDiv.appendChild(newCheckbox);
     newBoxWrapDiv.appendChild(newLabel);
     newBoxWrapDiv.appendChild(newDeleteBtn);
-
     newLi.appendChild(newBoxWrapDiv);
-
+    console.log(newLi);
     ul.insertBefore(newLi, ul.firstChild);
 
     const addText = "퀘스트 추가!";
@@ -95,12 +94,12 @@ const init = () => {
   // 엔터확인
   const isEnter = (e) => {
     if (e.key === "Enter") {
-      addMissionHandler();
+      addMissionHandler(e);
     }
   };
 
   missionAddBtn.addEventListener("click", addMissionHandler);
-  input.addEventListener("keydown", isEnter);
+  input.addEventListener("keypress", isEnter);
 };
 
 init();
